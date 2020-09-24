@@ -48,6 +48,9 @@ const checkDOMChange = () => {
     let updatedSections = document.querySelectorAll('section');
     if (updatedSections.length != sections.length) {
         sections = updatedSections;
+        // TODO: add updateNavBar function
+        // TODO: add call for updateNavBar function
+        updateNavBar();
     }
     setTimeout(checkDOMChange, 15000);
 }
@@ -144,7 +147,6 @@ window.addEventListener('scroll', function (e) {
     if (documentContentLoaded) {
         let activeSection = getActiveSection();
         if (activeSection) {
-
             setActiveSectionStyle(activeSection);
         }
     }
